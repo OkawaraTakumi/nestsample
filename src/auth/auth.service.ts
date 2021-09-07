@@ -12,7 +12,6 @@ export class AuthService {
   async validateUser({ username, password }: CreateUserDto) {
     const user = await this.usersService.findOne(username);
     const isValid = await bcrypt.compare(password, user.password);
-    console.log(9);
     if (!isValid) {
       throw new UnauthorizedException('Invalid crediential');
     }

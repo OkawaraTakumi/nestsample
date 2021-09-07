@@ -10,9 +10,6 @@ import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
-    // MongooseModule.forRoot(
-    //   'mongodb+srv://TakumiOkawara:blackbaby8_cp@cluster0.2atcp.mongodb.net/nestSample?retryWrites=true&w=majority'
-    // ),
     UsersModule,
     ConfigModule.forRoot({
       isGlobal: true,
